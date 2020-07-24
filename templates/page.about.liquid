@@ -1,2 +1,14 @@
 {% render 'page-header', title: page.title %}
-<h1>This is the about template</h1>
+
+<section class="about section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-fluid" src="{{settings.about_img | img_url: '1920x'}}">
+      </div>
+      <div class="col-md-6">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</section>
