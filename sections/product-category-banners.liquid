@@ -1,0 +1,118 @@
+<section class="product-category">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title text-center">
+          <h2>Product Category</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box">
+          <a href="{{section.settings.category_top_left_url}}">
+            <img src="{{section.settings.category_top_left_image | img_url: '1920x'}}" alt="">
+            <div class="content">
+              <h3>{{section.settings.category_top_left_header}}</h3>
+              <p>{{section.settings.category_top_left_text}}</p>
+            </div>
+          </a>  
+        </div>
+        <div class="category-box">
+          <a href="{{section.settings.category_bottom_left_url}}">
+            <img src="{{section.settings.category_bottom_left_image | img_url: '1920x'}}" alt="">
+            <div class="content">
+              <h3>{{section.settings.category_bottom_left_header}}</h3>
+              <p>{{section.settings.category_bottom_left_text}}</p>
+            </div>
+          </a>  
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box category-box-2">
+          <a href="{{section.settings.category_right_url}}">
+            <img src="{{section.settings.category_right_image | img_url: '1920x'}}" alt="">
+            <div class="content">
+              <h3>{{section.settings.category_right_header}}</h3>
+              <p>{{section.settings.category_right_text}}</p>
+            </div>
+          </a>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Category Banners",
+  "settings": [
+    {
+      "type": "text",
+      "id": "category_top_left_header",
+      "label": "Category Top Left Header",
+      "default": "Dresses"
+    },
+    {
+      "type": "text",
+      "id": "category_top_left_text",
+      "label": "Category Top Left Text",
+      "default": "Sale!"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_top_left_image",
+      "label": "Category Top Left Image"
+    },
+    {
+      "type": "url",
+      "id": "category_top_left_url",
+      "label": "Category Top Left Link"
+    },
+    {
+      "type": "text",
+      "id": "category_bottom_left_header",
+      "label": "Category Bottom Left Header",
+      "default": "Dresses"
+    },
+    {
+      "type": "text",
+      "id": "category_bottom_left_text",
+      "label": "Category Bottom Left Text",
+      "default": "Sale!"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_bottom_left_image",
+      "label": "Category Bottom Left Image"
+    },
+    {
+      "type": "url",
+      "id": "category_bottom_left_url",
+      "label": "Category Bottom Left Link"
+    },
+    {
+      "type": "text",
+      "id": "category_right_header",
+      "label": "Category Right Header",
+      "default": "Dresses"
+    },
+    {
+      "type": "text",
+      "id": "category_right_text",
+      "label": "Category Right Text",
+      "default": "Sale!"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_right_image",
+      "label": "Category Right Image"
+    },
+    {
+      "type": "url",
+      "id": "category_right_url",
+      "label": "Category Right Link"
+    }
+  ]
+}
+{% endschema %}
