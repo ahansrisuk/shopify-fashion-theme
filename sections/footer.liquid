@@ -1,0 +1,81 @@
+<footer class="footer section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="social-media">
+          {% if section.settings.facebook != blank %}
+            <li>
+              <a href="">
+                <i class="fa fa-facebook-f"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if section.settings.instagram != blank %}
+            <li>
+              <a href="">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if section.settings.twitter != blank %}
+            <li>
+              <a href="">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if section.settings.pinterest != blank %}
+            <li>
+              <a href="">
+                <i class="fa fa-pinterest"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+        <ul class="footer-menu">
+          <li>
+            <a href="">Contact</a>
+          </li>
+          <li>
+            <a href="">SHIPPING</a>
+          </li>
+          <li>
+            <a href="">TERMS OF SERVICE</a>
+          </li>
+          <li>
+            <a href="">PRIVACY POLICY</a>
+          </li>
+        </ul>
+        <p class="copyright-text">Copyright &#9400; Fashion</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "facebook",
+        "label": "Facebook Link"
+      },
+      {
+        "type": "text",
+        "id": "instagram",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "text",
+        "id": "twitter",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "text",
+        "id": "pinterest",
+        "label": "Pinterest Link"
+      }
+    ]
+  }
+{% endschema %}
