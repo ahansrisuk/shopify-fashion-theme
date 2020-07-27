@@ -48,11 +48,22 @@
       <div class="col-md-4 col-xs-12 col-sm-4">
         <ul class="top-menu list-inline float-right">
           <li class="list-inline-item">
-            <a href="/cart.html"><i class="fa fa-shopping-cart"></i>Cart</a>
+            <a href="/cart"><i class="fa fa-shopping-cart"></i>Cart</a>
           </li>
-          <li class="list-inline-item">
-            <a href="login.html"><i class="fa fa-sign-in"></i>Login</a>
-          </li>
+          {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+              <li class="list-inline-item">
+                <a href="/account/login"><i class="fa fa-sign-in"></i>Your Account</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/account/login"><i class="fa fa-sign-in"></i>Sign Out</a>
+              </li>
+            {% else %}
+              <li class="list-inline-item">
+                <a href="/account/login"><i class="fa fa-sign-in"></i>Login</a>
+              </li>
+            {% endif %}
+          {% endif %}
         </ul>
       </div>
     </div>
